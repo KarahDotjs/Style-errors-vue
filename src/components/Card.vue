@@ -1,5 +1,5 @@
 <script setup>
-import PetId from './PetId.vue'
+import PetId from '../components/PetId.vue'
 
 // Déclaration de la props qui contient les informations d'un animal
 const props = defineProps({
@@ -8,7 +8,9 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" :class="{
+    opacity: animalInfos.alreadyAdopted
+  }" >
     <div>
       <PetId :name="animalInfos.name" :species="animalInfos.species" :age="animalInfos.age" />
     </div>
@@ -19,34 +21,35 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  background-color:var(--white);
+  background-color: var(--white);
   padding: 15px;
   border-radius: 5px;
   width: calc((100% - 15px) / 2);
-  display: flex;
   flex-direction: row;
   gap: 10px;
   box-shadow: 0px 0px 7px var(--purple);
 }
-div {
+ div {
   width: 150px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 10px;
+  color: grey;
+  
 }
 .description {
   flex: 1;
 }
 span {
-  text-decoration: none;
-  color: gray;
+  text-decoration:underline;
+  
 }
 .card p {
-  color: var(--light-blue);
+  color: var(--blue);
+  
 }
-
-.card > div {
-  display: flex;
-  gap: 10px;
+ 
+.opacity {
+  opacity: 0.3;
 }
 </style>

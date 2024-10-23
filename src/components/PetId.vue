@@ -1,19 +1,16 @@
 <script setup>
-const props = defineProps ({
-    name: String,
-    species: String,
-    age: Number
+const props = defineProps({
+animalInfos : Object
 })
-console.log(props.animalInfos);
-
+console.log(props.animalInfos)
 </script>
 
 <template>
-
-<h2>{{ name }}</h2>
-      <p><span>Espèce</span> : {{ species }}</p>
-      <p><span>Age</span> : {{ age }}</p>
-
+  <div>
+    <h2>{{ animalInfos.name }}</h2>
+    <p><span>Espèce</span> : {{ animalInfos.species }}</p>
+    <p><span>Age</span> : {{ animalInfos.age }}</p>
+  </div>
 </template>
 
 <style scoped></style>

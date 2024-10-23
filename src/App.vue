@@ -27,21 +27,18 @@ import Card from './components/Card.vue'
 </template>
 
 <style scoped>
-
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
-
   background-color: var(--sky-blue);
-  height: 100vh;
+  min-height: 100vh;
 }
 main > div {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
   flex: 1;
-  width: 65vw;
 }
 </style>
