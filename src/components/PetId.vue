@@ -1,8 +1,7 @@
 <script setup>
 const props = defineProps({
-animalInfos : Object
+  animalInfos: Object
 })
-console.log(props.animalInfos)
 </script>
 
 <template>

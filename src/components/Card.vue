@@ -12,7 +12,7 @@ const props = defineProps({
     opacity: animalInfos.alreadyAdopted
   }" >
     <div>
-      <PetId :name="animalInfos.name" :species="animalInfos.species" :age="animalInfos.age" />
+      <PetId :animalInfos="animalInfos" />
     </div>
 
     <p class="description">{{ animalInfos.description }}</p>
@@ -21,13 +21,13 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  background-color: var(--white);
+  background-color: var(--bgc);
   padding: 15px;
   border-radius: 5px;
   width: calc((100% - 15px) / 2);
   flex-direction: row;
   gap: 10px;
-  box-shadow: 0px 0px 7px var(--purple);
+  box-shadow: 0px 0px 7px var(--shadow-color);
 }
  div {
   width: 150px;
@@ -52,4 +52,20 @@ span {
 .opacity {
   opacity: 0.3;
 }
+
+
+  @media (max-width: 900px) {
+    .card {
+      width: 100%;
+    }
+  }
+
+   @media (max-width: 500px) {
+    .card {
+      
+      flex-direction: column;
+    }
+  }
+
+
 </style>
