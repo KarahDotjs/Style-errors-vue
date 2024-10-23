@@ -1,6 +1,13 @@
 /* Import du fichier contenant le code CSS reset */
 @import './base.css';
 
+:root {
+  --white : rgb(244, 246, 247);
+  --light-blue : rgb(31, 143, 184);
+  --purple: rgb(114, 114, 193);
+  --sky-blue: rgb(204, 229, 237)
+}
+
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -12,10 +19,10 @@ h1 {
   font-size: 50px;
   font-weight: bold;
   margin-bottom: 40px;
-  color: rgb(31, 143, 184);
+  color: var(--light-blue)
 }
 h2 {
-  color: rgb(31, 143, 184);
+  color:var(--light-blue);
   font-weight: bold;
   font-size: 22px;
 }

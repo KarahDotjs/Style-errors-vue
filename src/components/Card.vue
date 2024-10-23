@@ -19,14 +19,14 @@ const props = defineProps({
 
 <style scoped>
 .card {
-  background-color: rgb(244, 246, 247);
+  background-color:var(--white);
   padding: 15px;
   border-radius: 5px;
   width: calc((100% - 15px) / 2);
   display: flex;
   flex-direction: row;
   gap: 10px;
-  box-shadow: 0px 0px 7px rgb(114, 114, 193);
+  box-shadow: 0px 0px 7px var(--purple);
 }
 div {
   width: 150px;
@@ -42,7 +42,7 @@ span {
   color: gray;
 }
 .card p {
-  color: rgb(9, 77, 101);
+  color: var(--light-blue);
 }
 
 .card > div {

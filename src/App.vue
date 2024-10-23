@@ -34,7 +34,7 @@ main {
   align-items: center;
   padding: 50px;
 
-  background-color: rgb(204, 229, 237);
+  background-color: var(--sky-blue);
   height: 100vh;
 }
 main > div {
