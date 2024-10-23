@@ -1,5 +1,5 @@
 <script setup>
-import PetId from './components/PetId.vue'
+import PetId from './PetId.vue'
 
 // Déclaration de la props qui contient les informations d'un animal
 const props = defineProps({
@@ -10,10 +10,7 @@ const props = defineProps({
 <template>
   <div class="card">
     <div>
-    <PetId />
-      <h2>{{ animalInfos.name }}</h2>
-      <p><span>Espèce</span> : {{ animalInfos.species }}</p>
-      <p><span>Age</span> : {{ animalInfos.age }}</p>
+      <PetId :name="animalInfos.name" :species="animalInfos.species" :age="animalInfos.age" />
     </div>
 
     <p class="description">{{ animalInfos.description }}</p>
@@ -36,11 +33,9 @@ div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  
 }
 .description {
   flex: 1;
- 
 }
 span {
   text-decoration: none;
@@ -48,7 +43,6 @@ span {
 }
 .card p {
   color: rgb(9, 77, 101);
-
 }
 
 .card > div {
